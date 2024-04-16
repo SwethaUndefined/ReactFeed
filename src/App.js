@@ -1,17 +1,20 @@
-// App.js
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import FeedPage from "./Pages/feedPage"
-import PostDetailPage from "./Pages/postDetailPage"
+import { ThemeProvider } from './themeContext'; 
+
+const FeedPage = lazy(() => import("./Pages/feedPage"));
+const PostDetailPage = lazy(() => import("./Pages/postDetailPage"));
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/post" element={<FeedPage />} />
-        <Route path="/postDetailPage/:postId" element={<PostDetailPage />} />
-      </Routes>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Suspense fallback={<div>Loading...</div>}><FeedPage /></Suspense>} />
+          <Route path="/postDetailPage/:postId" element={<Suspense fallback={<div>Loading...</div>}><PostDetailPage /></Suspense>} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 };
 

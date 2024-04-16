@@ -1,0 +1,29 @@
+*{
+  margin: 0px;
+}
+
+.feedPage.light {
+  background-color: rgb(244, 247, 254); 
+  padding: 20px;
+}
+
+.feedPage.dark {
+  background-color: #222222; 
+  padding: 20px;
+}
+.feedPage.dark .ant-typography {
+  color: #fff;
+}
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+.switch-col{
+  display: flex;
+  justify-content: center;
+}
+.switch{
+  margin-top: 10px;
+}

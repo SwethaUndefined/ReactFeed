@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+  }
+.postDetailPage{
+    padding: 20px;
+    background-color: rgb(244, 247, 254);
+    height: 100vh;
+    overflow: scroll;
+}
+.heading{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+}
+.profileImg{
+    height: 200px;
+    margin-top: 100px;
+}
+.image-row{
+    margin-top: 10px;
+}
+.text{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.postDetailPage.light {
+    background-color: rgb(244, 247, 254); 
+  }
+  
+  .postDetailPage.dark {
+    background-color: #222222; 
+  }
+  .postDetailPage.dark .ant-typography {
+    color: #fff;
+  }
