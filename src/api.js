@@ -8,7 +8,6 @@ export const fetchPosts = async (limit = 8, page = 1, query = '') => {
         'Authorization': 'XM0ooo4EG8puK9EPQ16M3KGxSA3ZsCKS'
       }
     });
-    console.log(response.data,"res")
     return response.data;
   } catch (error) {
     console.error('Error fetching posts:', error);
