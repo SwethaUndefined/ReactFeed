@@ -12,7 +12,7 @@ const FeedPage = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { theme, toggleTheme } = useTheme();
-
+  
   useEffect(() => {
     fetchInitialPosts();
   }, []);
